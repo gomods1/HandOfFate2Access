@@ -1,0 +1,26 @@
+{
+  "out_dir": "sounds",
+  "sr": 44100,
+  "normalize": -1.0,
+  "sounds": [
+    {
+      "out": "enemy_step.wav",
+      "duration": 0.2,
+      "layers": [
+        {"type": "sfx", "kind": "footstep", "params": {"tone": 110}},
+        {"type": "drum", "kind": "brush", "params": {"swish": 0.0, "dur": 0.12}, "gain": 0.35}
+      ],
+      "fx": [{"type": "mono"}, {"type": "fade", "in": 0, "out": 0.04}]
+    },
+    {
+      "out": "enemy_reach.wav",
+      "duration": 0.3,
+      "layers": [
+        {"type": "drum", "kind": "clave", "params": {"tune": 1500}, "vel": 0.8},
+        {"type": "drum", "kind": "clave", "params": {"tune": 1500}, "vel": 0.6, "at": 0.08},
+        {"type": "drum", "kind": "tom", "params": {"tune": 140, "decay": 0.15}, "gain": 0.4}
+      ],
+      "fx": [{"type": "mono"}, {"type": "fade", "in": 0, "out": 0.05}]
+    }
+  ]
+}

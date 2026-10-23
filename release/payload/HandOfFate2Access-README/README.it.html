@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="it" xml:lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc 3.12.1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Hand of Fate 2 Access</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      color: light-dark(#1a1a1a, #fdfdfd);
+      background-color: #fdfdfd;
+      background-color: light-dark(#fdfdfd, #1a1a1a);
+      color-scheme: light dark;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        color-scheme: light only;
+      }
+      html, body, pre, code {
+        background-color: transparent;
+      }
+      body, a, a:visited, blockquote {
+        color: black;
+      }
+      pre, code {
+        padding: 0;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a, a:visited {
+      color: inherit;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid;
+      border-color: #e6e6e6;
+      border-color: light-dark(#e6e6e6, #4c4c4c);
+      color: #606060;
+      color: light-dark(#606060, #b6b6b6);
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid currentColor;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid currentColor;
+      border-bottom: 1px solid currentColor;
+    }
+    th {
+      border-top: 1px solid currentColor;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body>
+<h1 id="hand-of-fate-2-access">Hand of Fate 2 Access</h1>
+<p>Una mod che rende Hand of Fate 2 giocabile senza vedere. Tutto ciò
+che il gioco mostra viene letto dal tuo screen reader, e le parti in
+tempo reale (il combattimento, il pendolo, la ruota, il mescolamento
+delle carte della sorte) diventano giocabili a orecchio grazie a segnali
+sonori aggiunti.</p>
+<p>È una ricostruzione dell'abbandonata "Hand of Fate 2 Accessibility
+Mod", basata su Hand of Fate Access, la mod del primo gioco.</p>
+<h2 id="requisiti">Requisiti</h2>
+<ul>
+<li>Windows.</li>
+<li>Hand of Fate 2 (Steam).</li>
+<li>Uno screen reader (NVDA, JAWS e altri). Senza, la mod usa la voce
+integrata di Windows.</li>
+</ul>
+<h2 id="installazione">Installazione</h2>
+<p>Il modo più semplice è l'installer,
+<code>HandOfFate2AccessibilityInstaller.exe</code>, allegato a ogni
+versione: trova il gioco tramite Steam, installa o aggiorna la mod e può
+disinstallarla. Funziona con lo screen reader. Per installare a
+mano:</p>
+<ol type="1">
+<li>Estrai lo zip della versione nella cartella di Hand of Fate 2
+(quella che contiene <code>Hand of Fate 2.exe</code>; con
+un'installazione Steam predefinita,
+<code>C:\Program Files (x86)\Steam\steamapps\common\Hand of Fate 2</code>).
+Consenti l'unione delle cartelle.</li>
+<li>Avvia il gioco. Pochi secondi dopo l'avvio senti "Hand of Fate 2
+Access versione ... caricato".</li>
+</ol>
+<p>Lo zip contiene il caricatore di mod (BepInEx) già configurato.</p>
+<h2 id="come-funziona">Come funziona</h2>
+<p>Hand of Fate 2 ha già una navigazione completa da tastiera e
+controller; la mod la legge. Muoviti tra menu, carte e scelte con i
+comandi del gioco (frecce, Invio o Spazio per confermare, Tab per
+tornare indietro, Esc per il menu di pausa) e ogni elemento parla:</p>
+<ul>
+<li>Le carte leggono nome, tipo, statistiche e ogni tratto con il suo
+testo di regole. L'equipaggiamento che ti viene offerto è confrontato
+con quello che indossi.</li>
+<li>Gli incontri leggono titolo, testo della storia, risultati ("+7
+cibo") e opzioni, compresi il costo o il requisito stampati accanto a
+un'opzione e se non è disponibile.</li>
+<li>Le battute recitate del mazziere e dei personaggi vengono lette per
+intero nella tua lingua, che l'impostazione Sottotitoli del gioco sia
+attiva o no.</li>
+<li>Le domande nella barra in basso ("Equipaggiare l'Ascia del
+guerriero? Sì, No") vengono lette quando compaiono.</li>
+<li>Gli obiettivi della sfida vengono letti quando compaiono, cambiano,
+vengono completati o falliscono.</li>
+<li>La fine di una partita viene annunciata con il verdetto del gioco
+stesso (morte per ferite o per fame, resa, sfida fallita), poi i
+risultati.</li>
+<li>Vengono letti i dialoghi, il tutorial dei comandi di combattimento
+(con il tasto di ogni azione), le presentazioni delle creature e la
+personalizzazione del personaggio (origini, sigilli e una descrizione di
+ogni acconciatura e colore dell'abito).</li>
+<li>Le variazioni di cibo, oro, fama e vita vengono annunciate quando
+avvengono.</li>
+<li>I nomi delle schermate vengono pronunciati quando vi entri (menu
+principale, mappa, mappa delle sfide, costruttore di mazzi, inventario,
+pausa, risultati). L'inventario dice anche cosa c'è in ogni slot, vuoti
+compresi, perché il cursore del gioco salta gli slot vuoti.</li>
+<li>La tabella dei punteggi di fine partita (Infinito) viene letta riga
+per riga con i nomi delle colonne.</li>
+<li>Negozi: ogni articolo legge il suo prezzo ("37 oro") e dice quando
+non puoi permettertelo; le azioni di conferma che fanno qualcosa di
+specifico ("Compra, Invio") vengono annunciate con il loro tasto.</li>
+<li>Le azioni su un tasto funzione (F1 Inventario, F3 Mappa, F3 Fine
+nella schermata del personaggio, F3 Inizia nel costruttore di mazzi)
+vengono annunciate con il loro tasto quando compaiono. L'inventario dice
+che Tab (il tasto indietro del gioco) lo chiude.</li>
+<li>In un incontro, i tasti numerici da 1 a 9 scelgono direttamente
+un'opzione (una funzione del gioco).</li>
+<li>La mappa delle sfide: ogni sfida legge il suo nome e se è bloccata
+(con ciò che la sblocca), completata, o se ha guadagnato il gettone
+d'oro o d'argento; Campagna, Avventura, Infinito e Falò dicono quale
+sezione è mostrata (Falò contiene la schermata per cambiare aspetto).
+Aprire una sfida ne legge titolo e descrizione.</li>
+<li>Impostazioni: ogni riga legge nome e valore (liste, caselle,
+cursori, associazioni di tasti), e il nuovo valore viene pronunciato
+mentre lo cambi.</li>
+<li>Le carte ricompensa girate alla fine di una sfida vengono lette man
+mano che vengono rivelate.</li>
+<li>Il costruttore di mazzi: ogni mazzo dice il suo nome, a cosa serve e
+quanto è pieno ("Incontri, 13 di 13 carte"); all'interno, sinistra e
+destra scorrono le carte disponibili o il tuo mazzo (giù e su passano
+dall'uno all'altro) e ogni carta dice nome, tipo e statistiche (Ctrl +
+Su legge il resto); confermare la aggiunge o la rimuove e viene
+pronunciato il nuovo conteggio.</li>
+<li>Le domande nella barra in basso nominano i loro tasti sulla tastiera
+("Vai via, Tab; Accetta dado, F3"). I nomi dei tasti vengono pronunciati
+nella tua lingua.</li>
+</ul>
+<h2 id="tasti-aggiunti-dalla-mod">Tasti aggiunti dalla mod</h2>
+<ul>
+<li><strong>F4</strong>: aiuto per la schermata in cui ti trovi, prima i
+tasti del gioco, poi quelli della mod. Le frecce su e giù lo leggono una
+voce alla volta; F4 o Tab lo chiude. (F1 è il tasto inventario del
+gioco.)</li>
+<li><strong>Ctrl + Su / Ctrl + Giù</strong>: leggono i dettagli di ciò
+che ha il focus, una riga alla volta. Una carta viene annunciata in
+breve (nome, tipo, statistiche); i suoi tratti e le regole sono qui.
+Funziona ovunque, combattimento compreso.</li>
+<li><strong>Ctrl + Sinistra / Ctrl + Destra</strong>: cambiano ciò che
+Ctrl + Su e Giù leggono: <strong>Dettagli</strong> (l'elemento con il
+focus), <strong>Eventi</strong> (tutto ciò che è stato annunciato
+finora, dal più recente: testo degli incontri, domande, inizi di
+combattimento, avvisi di vita, risultati) e <strong>Stato</strong>
+(vita, cibo, oro, fama, veleno e cosa è equipaggiato in ogni slot). Le
+liste vuote vengono saltate.</li>
+<li><strong>H</strong> (o barra, o clic dello stick destro): vita, cibo,
+oro, fama e veleno.</li>
+<li><strong>O</strong>: gli obiettivi della sfida in corso.</li>
+<li><strong>Maiusc + frecce</strong> (o lo stick destro) sulla mappa: un
+cursore di esplorazione che percorre tutto il tabellone visibile carta
+per carta, leggendo ogni carta, se ci sei sopra, se puoi raggiungerla,
+se è l'uscita e quali direzioni proseguono da lì. Legge soltanto;
+muoviti con le frecce e Invio del gioco. Ctrl + Su legge poi per intero
+la carta esplorata.</li>
+<li><strong>Maiusc + punto</strong> sulla mappa: il cursore di
+esplorazione salta alla prossima carta che non hai ancora visitato, la
+più vicina per prima; <strong>Maiusc + virgola</strong> torna alla
+precedente. Ogni lettura finisce con dove si trova la carta rispetto a
+te e il suo posto nell'elenco («non visitata 2 di 5»); dopo l'ultima
+ricomincia dalla più vicina. Un negozio o un'altra carta in cui sei già
+entrato non conta più. Legge soltanto, come Maiusc + frecce.</li>
+<li><strong>C</strong> (o clic dello stick sinistro) in combattimento:
+un bip dalla direzione del nemico più vicino. Quando i nemici sono
+finiti, indica invece ciò che resta da raggiungere (l'uscita, il cerchio
+che si chiude di un boss, oro o cibo caduti), oppure dice "nessun nemico
+rimasto".</li>
+<li><strong>Nemici che puoi finire</strong>: un nemico atterrato emette
+un sibilo ascendente da dove giace, che si ripete più veloce man mano
+che ti avvicini, finché non si rialza. Raggiungilo e premi il tasto del
+gioco per finirlo. Quando il nemico più vicino si può finire,
+<strong>C</strong> risponde con quel sibilo invece del solito bip.
+Appena il colpo di grazia andrebbe a segno (abbastanza vicino e nella
+direzione in cui spingi o guardi), il sibilo ha sopra un rintocco
+squillante: premi ora il tasto per finirlo, spingendo verso il suono.
+Anche <strong>C</strong> dà il rintocco quando il nemico più vicino è a
+portata.</li>
+</ul>
+<h2 id="combattere-a-orecchio">Combattere a orecchio</h2>
+<ul>
+<li>Il combattimento inizia con il numero di nemici ("Combattimento, 3
+nemici") e il conteggio viene pronunciato quando cambia. La tua vita
+viene pronunciata quando scende sotto la metà, un quarto e un
+decimo.</li>
+<li><strong>Clangore</strong>: un attacco che puoi contrastare. Premi
+difendi. Il gioco assegna attacco e difesa solo ai pulsanti del mouse,
+quindi la mod dà loro dei tasti: <strong>V attacca e B difende</strong>
+(a meno che tu non assegni i tuoi in Impostazioni, Controlli, Associa
+input). Gli annunci nominano il tasto della tastiera, o il pulsante del
+controller quando ne usi uno.</li>
+<li><strong>Schiocco</strong>: un attacco che non puoi bloccare. Schiva
+(Spazio).</li>
+<li><strong>Vento</strong>: i muri. Il vento su ogni lato cresce quando
+ti avvicini a un muro su quel lato; un urto significa che ci sei andato
+contro.</li>
+<li>Proiettili, pericoli a terra, raggi e trappole hanno ciascuno il
+proprio suono, sempre posizionato dove si trova il pericolo: allontanati
+dal suono.</li>
+<li>Un campanello ti avvisa che un'abilità dell'arma (sinistra) o
+dell'artefatto (destra) è di nuovo pronta.</li>
+<li><strong>Intrappolato</strong>: quando un nemico ti si aggrappa
+(sciami di gnomi, il laccio di un mago) senti "Intrappolato" con il
+tasto da premere ripetutamente finché non senti "libero". I piccoli
+colpi che subisci nel frattempo sono la trappola stessa.</li>
+<li><strong>Armatura</strong>: alcuni nemici (il Terrore di Westwend, i
+nemici corrotti) indossano un'armatura che solo lo
+<strong>Sfondamento</strong> danneggia (E sulla tastiera di default, B
+sul controller; la mod aggiunge X se non ha un tasto). Un tonfo
+metallico sordo significa che il tuo colpo è rimbalzato; la prima volta
+su ogni nemico senti anche «Corazzato, usa Sfondamento» con il tasto.
+Uno scricchiolio significa che il tuo Sfondamento l'ha incrinata; un
+fragore e «Armatura spezzata» significano che i tuoi colpi tornano a
+fare pieno danno; un luccichio ascendente significa che l'armatura si
+sta riformando (piano mentre si ripara, più forte con «Armatura
+ripristinata» quando un'armatura spezzata ritorna). Ogni suono viene da
+quel nemico e hanno un volume proprio nelle impostazioni. Il comando
+Stordire del gioco si chiama Sfondamento in tutta la mod, come sulle
+carte del gioco.</li>
+<li>Se il combattimento è troppo difficile, la Modalità apprendista del
+gioco (Impostazioni, Generale; il gioco la propone anche dopo alcune
+morti) automatizza contrattacchi e finisher e aumenta i tuoi danni. La
+mod funziona allo stesso modo in entrambi i casi.</li>
+<li>Nei combattimenti che finiscono a un'uscita (stanze di trappole),
+l'uscita emette un bip dalla prossima svolta del percorso praticabile
+verso di essa, così camminare verso il bip ti porta attorno ai muri fino
+all'uscita; oro e cibo caduti emettono lo stesso bip, più leggero.</li>
+<li>Una trappola che spara lungo la corsia in cui ti trovi (frecce,
+dardi) riproduce lo schiocco: spostati.</li>
+</ul>
+<p>Il menu di pausa ha una nuova opzione in fondo, <strong>Glossario dei
+suoni</strong>: scorrilo con le frecce per sentire cosa significa ogni
+suono, Invio lo riproduce, Tab lo chiude.</p>
+<h2 id="minigiochi">Minigiochi</h2>
+<ul>
+<li><strong>Carte della sorte</strong>: le carte vengono mostrate,
+ciascuna con il proprio tono e il suo esito pronunciato dalla sua
+posizione, poi il tono di ogni carta la segue durante il mescolamento.
+Scegli la posizione che hai seguito; le carte si leggono come "Posizione
+1", "Posizione 2"...</li>
+<li><strong>Pendolo</strong>: mentre oscilla senti l'esito sotto il
+raggio, che si sposta a sinistra e a destra con lui: più acuto e
+brillante è meglio. Premi conferma sul tono che vuoi; il focus te lo
+ricorda.</li>
+<li><strong>Ruota</strong>: le carte sulla ruota vengono lette quando
+viene disposta; mentre gira, ogni segmento passa con un tic nella voce
+del suo esito; premi conferma per rallentarla. Dove si ferma viene
+pronunciato.</li>
+<li><strong>Dadi</strong>: premi conferma per lanciare (altrimenti il
+gioco richiede un trascinamento con il mouse). Vengono pronunciati
+l'obiettivo, il totale e i dadi di ogni lancio e se hai raggiunto
+l'obiettivo; i dadi che puoi rilanciare leggono il loro valore e se sono
+contrassegnati, e contrassegnarne uno viene annunciato. F3
+rilancia.</li>
+</ul>
+<h2 id="lingue">Lingue</h2>
+<p>La mod segue la lingua del gioco: tutte e dodici le lingue del gioco
+sono coperte (tutto ciò che dice il gioco stesso è sempre nella tua
+lingua). Questo README esiste in ognuna di esse nella cartella
+<code>docs</code>, in Markdown e in HTML
+(<code>docs/README.&lt;lingua&gt;.md</code> e
+<code>docs/html/README.&lt;lingua&gt;.html</code>).</p>
+<h2 id="per-gli-sviluppatori">Per gli sviluppatori</h2>
+<p>Vedi <code>CLAUDE.md</code>. <code>setup-bepinex.ps1</code> installa
+il caricatore, <code>build.ps1</code> compila e distribuisce,
+<code>test.ps1</code> esegue i test offline.</p>
+</body>
+</html>

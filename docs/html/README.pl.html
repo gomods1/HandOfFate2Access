@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pl" xml:lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc 3.12.1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Hand of Fate 2 Access</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      color: light-dark(#1a1a1a, #fdfdfd);
+      background-color: #fdfdfd;
+      background-color: light-dark(#fdfdfd, #1a1a1a);
+      color-scheme: light dark;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        color-scheme: light only;
+      }
+      html, body, pre, code {
+        background-color: transparent;
+      }
+      body, a, a:visited, blockquote {
+        color: black;
+      }
+      pre, code {
+        padding: 0;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a, a:visited {
+      color: inherit;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid;
+      border-color: #e6e6e6;
+      border-color: light-dark(#e6e6e6, #4c4c4c);
+      color: #606060;
+      color: light-dark(#606060, #b6b6b6);
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid currentColor;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid currentColor;
+      border-bottom: 1px solid currentColor;
+    }
+    th {
+      border-top: 1px solid currentColor;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body>
+<h1 id="hand-of-fate-2-access">Hand of Fate 2 Access</h1>
+<p>Mod, który sprawia, że w Hand of Fate 2 można grać bez wzroku.
+Wszystko, co pokazuje gra, jest wypowiadane przez twój czytnik ekranu, a
+części czasu rzeczywistego (walka, wahadło, koło, tasowanie kart losu)
+stają się grywalne ze słuchu dzięki dodanym sygnałom dźwiękowym.</p>
+<p>To odbudowa porzuconego „Hand of Fate 2 Accessibility Mod”, oparta na
+Hand of Fate Access, modzie do pierwszej gry.</p>
+<h2 id="wymagania">Wymagania</h2>
+<ul>
+<li>Windows.</li>
+<li>Hand of Fate 2 (Steam).</li>
+<li>Czytnik ekranu (NVDA, JAWS i inne). Bez niego mod używa wbudowanej
+mowy systemu Windows.</li>
+</ul>
+<h2 id="instalacja">Instalacja</h2>
+<p>Najprościej użyć instalatora
+<code>HandOfFate2AccessibilityInstaller.exe</code>, dołączonego do
+każdego wydania: znajduje grę przez Steam, instaluje lub aktualizuje
+moda i potrafi go odinstalować. Działa z czytnikiem ekranu. Aby
+zainstalować ręcznie:</p>
+<ol type="1">
+<li>Rozpakuj archiwum zip wydania do folderu Hand of Fate 2 (tego z
+plikiem <code>Hand of Fate 2.exe</code>; przy domyślnej instalacji Steam
+to
+<code>C:\Program Files (x86)\Steam\steamapps\common\Hand of Fate 2</code>).
+Zezwól na scalenie folderów.</li>
+<li>Uruchom grę. Kilka sekund po starcie usłyszysz „Hand of Fate 2
+Access wersja ... wczytany”.</li>
+</ol>
+<p>Archiwum zawiera już skonfigurowany program ładujący mody
+(BepInEx).</p>
+<h2 id="jak-to-działa">Jak to działa</h2>
+<p>Hand of Fate 2 ma już pełną nawigację klawiaturą i padem; mod ją
+odczytuje. Poruszaj się po menu, kartach i wyborach sterowaniem gry
+(strzałki, Enter lub spacja, by potwierdzić, Tab, by wrócić, Escape dla
+menu pauzy), a każdy element mówi:</p>
+<ul>
+<li>Karty czytają nazwę, typ, statystyki i każdą cechę z jej tekstem
+zasad. Oferowany ekwipunek jest porównywany z tym, który masz na
+sobie.</li>
+<li>Spotkania czytają tytuł, tekst fabuły, wyniki („+7 jedzenia”) i
+opcje, w tym koszt lub wymaganie wypisane obok opcji oraz to, czy jest
+niedostępna.</li>
+<li>Kwestie mówione rozdającego i postaci są czytane w całości w twoim
+języku, niezależnie od tego, czy w grze włączono napisy.</li>
+<li>Pytania na dolnym pasku („Założyć Topór wojownika? Tak, Nie”) są
+czytane, gdy się pojawiają.</li>
+<li>Cele wyzwania są czytane, gdy się pojawiają, zmieniają, zostają
+wykonane lub zawodzą.</li>
+<li>Koniec rozgrywki jest ogłaszany werdyktem samej gry (śmierć od ran
+lub z głodu, poddanie się, nieudane wyzwanie), a potem wyniki.</li>
+<li>Czytane są dialogi, samouczek sterowania w walce (z klawiszem każdej
+akcji), prezentacje stworzeń i personalizacja postaci (pochodzenie,
+pieczęcie oraz opis każdej fryzury i koloru stroju).</li>
+<li>Zmiany jedzenia, złota, sławy i zdrowia są ogłaszane na
+bieżąco.</li>
+<li>Nazwy ekranów są wypowiadane przy wejściu (menu główne, mapa, mapa
+wyzwań, kreator talii, ekwipunek, pauza, wyniki). Ekwipunek mówi też, co
+jest w każdym gnieździe, łącznie z pustymi, bo kursor gry pomija puste
+gniazda.</li>
+<li>Tabela wyników na koniec rozgrywki (Tryb nieskończony) jest czytana
+wiersz po wierszu z nazwami kolumn.</li>
+<li>Sklepy: każdy towar czyta cenę („37 złota”) i mówi, gdy cię na niego
+nie stać; akcje potwierdzenia robiące coś konkretnego („Kup, Enter”) są
+ogłaszane z klawiszem.</li>
+<li>Akcje na klawiszach funkcyjnych (F1 Ekwipunek, F3 Mapa, F3 Zakończ
+na ekranie postaci, F3 Start w kreatorze talii) są ogłaszane z
+klawiszem, gdy się pojawiają. Ekwipunek mówi, że Tab (klawisz powrotu w
+grze) go zamyka.</li>
+<li>W spotkaniu klawisze numeryczne od 1 do 9 wybierają opcję
+bezpośrednio (funkcja gry).</li>
+<li>Mapa wyzwań: każde wyzwanie czyta nazwę i to, czy jest zablokowane
+(z warunkiem odblokowania), ukończone, czy zdobyło złoty lub srebrny
+żeton; Kampania, Przygoda, Tryb nieskończony i Ognisko mówią, która
+sekcja jest pokazana (Ognisko zawiera ekran zmiany wyglądu). Otwarcie
+wyzwania czyta jego tytuł i opis.</li>
+<li>Ustawienia: każdy wiersz czyta nazwę i wartość (listy, pola wyboru,
+suwaki, przypisania klawiszy), a nowa wartość jest wypowiadana przy
+zmianie.</li>
+<li>Karty nagród odwracane na końcu wyzwania są czytane w miarę
+odkrywania.</li>
+<li>Kreator talii: każda talia mówi nazwę, przeznaczenie i zapełnienie
+(„Spotkania, 13 z 13 kart”); w środku lewo i prawo przechodzą po
+dostępnych kartach lub twojej talii (dół i góra przełączają między
+nimi), a każda karta mówi nazwę, rodzaj i statystyki (Ctrl + Góra czyta
+resztę); potwierdzenie dodaje ją lub usuwa, a nowa liczba jest
+wypowiadana.</li>
+<li>Pytania na dolnym pasku podają swoje klawisze na klawiaturze
+(„Odejdź, Tab; Przyjmij kość, F3”). Nazwy klawiszy są wypowiadane w
+twoim języku.</li>
+</ul>
+<h2 id="klawisze-dodane-przez-mod">Klawisze dodane przez mod</h2>
+<ul>
+<li><strong>F4</strong>: pomoc dla bieżącego ekranu, najpierw klawisze
+gry, potem klawisze moda. Strzałki w górę i w dół czytają ją pozycja po
+pozycji; F4 lub Tab ją zamyka. (F1 to klawisz ekwipunku samej gry.)</li>
+<li><strong>Ctrl + Góra / Ctrl + Dół</strong>: czytają szczegóły tego,
+co ma fokus, wiersz po wierszu. Karta jest ogłaszana krótko (nazwa,
+rodzaj, statystyki); jej cechy i zasady są tutaj. Działa wszędzie, także
+w walce.</li>
+<li><strong>Ctrl + Lewo / Ctrl + Prawo</strong>: przełączają, co czytają
+Ctrl + Góra i Dół: <strong>Szczegóły</strong> (element z fokusem),
+<strong>Zdarzenia</strong> (wszystko ogłoszone do tej pory, najnowsze
+najpierw: tekst spotkań, pytania, początki walk, ostrzeżenia o zdrowiu,
+wyniki) i <strong>Stan</strong> (zdrowie, jedzenie, złoto, sława,
+trucizna i to, co masz założone w każdym gnieździe). Puste listy są
+pomijane.</li>
+<li><strong>H</strong> (lub ukośnik, lub wciśnięcie prawej gałki): twoje
+zdrowie, jedzenie, złoto, sława i trucizna.</li>
+<li><strong>O</strong>: cele bieżącego wyzwania.</li>
+<li><strong>Shift + strzałki</strong> (lub prawa gałka) na mapie: kursor
+przeglądu, który przechodzi całą widoczną planszę karta po karcie,
+czytając każdą kartę, czy na niej stoisz, czy możesz na nią przejść, czy
+jest wyjściem i w które strony prowadzą z niej ścieżki. Tylko czyta;
+poruszaj się strzałkami i Enterem gry. Ctrl + Góra czyta potem
+przejrzaną kartę w całości.</li>
+<li><strong>Shift + kropka</strong> na mapie: kursor przeglądu
+przeskakuje do następnej karty, której jeszcze nie odwiedzono, od
+najbliższej; <strong>Shift + przecinek</strong> wraca do poprzedniej.
+Każdy odczyt kończy się tym, gdzie karta leży względem ciebie, i jej
+miejscem na liście („nieodwiedzona 2 z 5”); po ostatniej zaczyna znowu
+od najbliższej. Sklep lub inna karta, na którą już wszedłeś, przestaje
+się liczyć. Tylko czyta, jak Shift + strzałki.</li>
+<li><strong>C</strong> (lub wciśnięcie lewej gałki) w walce: sygnał z
+kierunku najbliższego wroga. Gdy wrogów już nie ma, wskazuje to, do
+czego jeszcze trzeba dojść (wyjście, zaciskający się krąg bossa,
+upuszczone złoto lub jedzenie), albo mówi „nie ma już wrogów”.</li>
+<li><strong>Wrogowie, których możesz dobić</strong>: powalony wróg
+wydaje narastający świst z miejsca, gdzie leży, powtarzany tym szybciej,
+im bliżej jesteś, dopóki nie wstanie. Podejdź i naciśnij klawisz
+dobijania z gry. Gdy najbliższego wroga można dobić, <strong>C</strong>
+odpowiada tym świstem zamiast zwykłego sygnału. Gdy dobicie by trafiło
+(dość blisko i w kierunku, w który się kierujesz lub patrzysz), do
+świstu dochodzi jasny dzwonek: naciśnij teraz klawisz dobijania,
+kierując się w stronę dźwięku. <strong>C</strong> też daje dzwonek, gdy
+najbliższy wróg jest w zasięgu.</li>
+</ul>
+<h2 id="walka-ze-słuchu">Walka ze słuchu</h2>
+<ul>
+<li>Walka zaczyna się liczbą wrogów („Walka, 3 wrogów”), a liczba jest
+wypowiadana, gdy się zmienia. Twoje zdrowie jest wypowiadane, gdy spada
+poniżej połowy, ćwierci i jednej dziesiątej.</li>
+<li><strong>Szczęk</strong>: atak, który możesz skontrować. Naciśnij
+obronę. Gra przypisuje atak i obronę tylko do przycisków myszy, więc mod
+daje im klawisze: <strong>V atakuje, B broni</strong> (chyba że
+przypiszesz własne w Ustawieniach, Sterowanie, Przypisz wejście).
+Komunikaty podają klawisz klawiatury lub przycisk pada, gdy go
+używasz.</li>
+<li><strong>Trzask</strong>: atak, którego nie da się zablokować. Unikaj
+(spacja).</li>
+<li><strong>Wiatr</strong>: ściany. Wiatr z każdej strony narasta, gdy
+zbliżasz się do ściany z tej strony; uderzenie oznacza, że w nią
+weszłeś.</li>
+<li>Pociski, zagrożenia na ziemi, promienie i pułapki mają własne
+dźwięki, zawsze umieszczone tam, gdzie jest zagrożenie: odsuń się od
+dźwięku.</li>
+<li>Dzwonek informuje, że umiejętność broni (lewo) lub artefaktu (prawo)
+jest znów gotowa.</li>
+<li><strong>Schwytany</strong>: gdy wróg się ciebie uczepi (roje gnomów,
+pułapka maga), słyszysz „Schwytany” z klawiszem, który trzeba naciskać
+wielokrotnie, aż usłyszysz „wolny”. Drobne obrażenia w tym czasie to
+sama pułapka.</li>
+<li><strong>Pancerz</strong>: niektórzy wrogowie (Postrach Westwend,
+spaczeni przeciwnicy) noszą pancerz, który rani tylko
+<strong>Grzmotnięcie</strong> (domyślnie E na klawiaturze, B na
+kontrolerze; gdy nie ma klawisza, mod dodaje X). Głuchy metaliczny stuk
+oznacza, że twój cios się odbił; za pierwszym razem przy każdym wrogu
+słyszysz też „Opancerzony, użyj Grzmotnięcia” z klawiszem. Chrzęst
+oznacza, że Grzmotnięcie go nadkruszyło; trzask i „Pancerz rozbity”
+oznaczają, że twoje ciosy znów zadają pełne obrażenia; narastający
+połysk oznacza, że pancerz odrasta (cicho, gdy się naprawia, głośniej z
+„Pancerz odnowiony”, gdy rozbity pancerz wraca). Każdy dźwięk dochodzi
+od tego wroga, a w ustawieniach mają własną głośność. Sterowanie
+Ogłuszenie z gry nazywa się w całym modzie Grzmotnięciem, jak na kartach
+gry.</li>
+<li>Jeśli walka jest zbyt trudna, Tryb ucznia w grze (Ustawienia,
+Ogólne; gra proponuje go też po kilku śmierciach) automatyzuje riposty i
+dobicia oraz zwiększa twoje obrażenia. Mod działa tak samo w obu
+przypadkach.</li>
+<li>W walkach kończących się przy wyjściu (sale z pułapkami) wyjście
+sygnalizuje od następnego zakrętu przechodniej ścieżki do niego, więc
+idąc w stronę sygnału, omijasz ściany aż do wyjścia; upuszczone złoto i
+jedzenie sygnalizują tak samo, lżejszym dźwiękiem.</li>
+<li>Pułapka strzelająca wzdłuż pasa, na którym stoisz (strzały, lotki),
+gra trzask: rusz się.</li>
+</ul>
+<p>Menu pauzy ma na dole nową opcję, <strong>Słownik dźwięków</strong>:
+przejdź go strzałkami, by usłyszeć, co znaczy każdy dźwięk; Enter go
+odtwarza, Tab zamyka.</p>
+<h2 id="minigry">Minigry</h2>
+<ul>
+<li><strong>Karty losu</strong>: karty są pokazywane, każda z własnym
+tonem i wynikiem wypowiedzianym z jej pozycji, a potem ton każdej karty
+podąża za nią podczas tasowania. Wybierz pozycję, którą śledziłeś; karty
+czytają się jako „Miejsce 1”, „Miejsce 2”...</li>
+<li><strong>Wahadło</strong>: gdy się kołysze, słyszysz wynik pod
+promieniem, poruszający się z nim w lewo i w prawo: wyżej i jaśniej
+znaczy lepiej. Naciśnij potwierdzenie na tonie, który chcesz; fokus o
+tym przypomina.</li>
+<li><strong>Koło</strong>: karty na kole są czytane przy rozkładaniu;
+gdy się kręci, każdy segment przelatuje z tyknięciem w głosie swojego
+wyniku; naciśnij potwierdzenie, by je spowolnić. Gdzie się zatrzyma,
+jest wypowiadane.</li>
+<li><strong>Kości</strong>: naciśnij potwierdzenie, by rzucić (inaczej
+gra wymaga przeciągnięcia myszą). Wypowiadane są cel, suma i kości
+każdego rzutu oraz to, czy osiągnięto cel; kości do przerzutu czytają
+wartość i czy są zaznaczone, a zaznaczenie jest ogłaszane. F3
+przerzuca.</li>
+</ul>
+<h2 id="języki">Języki</h2>
+<p>Mod podąża za językiem gry: obsłużonych jest wszystkie dwanaście
+języków gry (wszystko, co mówi sama gra, jest zawsze w twoim języku).
+Ten README istnieje w każdym z nich w folderze <code>docs</code>, jako
+Markdown i HTML (<code>docs/README.&lt;język&gt;.md</code> i
+<code>docs/html/README.&lt;język&gt;.html</code>).</p>
+<h2 id="dla-programistów">Dla programistów</h2>
+<p>Zobacz <code>CLAUDE.md</code>. <code>setup-bepinex.ps1</code>
+instaluje program ładujący, <code>build.ps1</code> buduje i wdraża,
+<code>test.ps1</code> uruchamia testy offline.</p>
+</body>
+</html>

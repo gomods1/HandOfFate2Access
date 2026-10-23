@@ -1,0 +1,73 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net35</TargetFramework>
+    <OutputType>Library</OutputType>
+    <AssemblyName>HandOfFate2Access</AssemblyName>
+    <RootNamespace>HandOfFate2Access</RootNamespace>
+    <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+
+    <!-- Game install root. Override with the HOF2_GAME environment variable
+         (build.ps1 sets it from Steam's library list). -->
+    <HofGame Condition="'$(HOF2_GAME)' != ''">$(HOF2_GAME)</HofGame>
+    <HofGame Condition="'$(HofGame)' == ''">C:\Program Files (x86)\Steam\steamapps\common\Hand of Fate 2</HofGame>
+    <HofManaged>$(HofGame)\Hand of Fate 2_Data\Managed</HofManaged>
+    <HofBepInEx>$(HofGame)\BepInEx\core</HofBepInEx>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.3" PrivateAssets="all" />
+  </ItemGroup>
+
+  <!-- Plugin.PluginVersion generated from <Version> (Directory.Build.props), so the
+       BepInPlugin attribute and the spoken startup line share one source of truth. -->
+  <Target Name="GeneratePluginVersion" BeforeTargets="CoreCompile">
+    <PropertyGroup>
+      <GeneratedVersionFile>$(IntermediateOutputPath)PluginVersion.g.cs</GeneratedVersionFile>
+      <GeneratedVersionSource>namespace HandOfFate2Access { public partial class Plugin { public const string PluginVersion = "$(Version)"%3B } }</GeneratedVersionSource>
+    </PropertyGroup>
+    <WriteLinesToFile File="$(GeneratedVersionFile)" Lines="$(GeneratedVersionSource)" Overwrite="true" WriteOnlyWhenDifferent="true" />
+    <ItemGroup>
+      <Compile Include="$(GeneratedVersionFile)" />
+      <FileWrites Include="$(GeneratedVersionFile)" />
+    </ItemGroup>
+  </Target>
+
+  <ItemGroup>
+    <ProjectReference Include="..\HandOfFate2Access.Core\HandOfFate2Access.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="BepInEx">
+      <HintPath>$(HofBepInEx)\BepInEx.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="0Harmony">
+      <HintPath>$(HofBepInEx)\0Harmony.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+
+  <!-- Game assemblies. Unity 2017.4 is modular: UnityEngine.dll forwards to the
+       UnityEngine.*Module assemblies, so all of them are referenced. NGUI and
+       InControl are compiled into Assembly-CSharp. -->
+  <ItemGroup>
+    <Reference Include="$(HofManaged)\UnityEngine*.dll">
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>$(HofManaged)\Assembly-CSharp.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Assembly-CSharp-firstpass">
+      <HintPath>$(HofManaged)\Assembly-CSharp-firstpass.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="DefiantDataSerializer">
+      <HintPath>$(HofManaged)\DefiantDataSerializer.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+
+</Project>

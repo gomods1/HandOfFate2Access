@@ -1,0 +1,225 @@
+{
+  "out_dir": "sounds",
+  "sr": 44100,
+  "normalize": -7.0,
+  "sounds": [
+    {
+      "out": "armour_absorbed.wav",
+      "duration": 0.3,
+      "layers": [
+        {
+          "type": "sfx",
+          "kind": "steel_ball",
+          "params": {
+            "surface": "metal",
+            "force": 0.5
+          }
+        },
+        {
+          "type": "drum",
+          "kind": "tom",
+          "params": {
+            "tune": 110,
+            "decay": 0.12
+          },
+          "gain": 0.5
+        },
+        {
+          "type": "seq",
+          "inst": "bell",
+          "steps": "C4:0.2",
+          "vel": 0.35,
+          "params": {
+            "decay": 0.4,
+            "bright": 0.4
+          }
+        }
+      ],
+      "fx": [
+        {
+          "type": "lowpass",
+          "cutoff": 3500
+        },
+        {
+          "type": "mono"
+        },
+        {
+          "type": "fade",
+          "in": 0,
+          "out": 0.05
+        }
+      ],
+      "normalize": -1.0
+    },
+    {
+      "out": "armour_crack.wav",
+      "duration": 0.4,
+      "layers": [
+        {
+          "type": "sfx",
+          "kind": "hit",
+          "params": {
+            "dur": 0.2,
+            "tone": 260,
+            "crunch": 0.9
+          }
+        },
+        {
+          "type": "sfx",
+          "kind": "solenoid",
+          "params": {
+            "size": 0.3,
+            "metal": 0.9,
+            "thump": 0.2,
+            "bounce": 0.3
+          },
+          "gain": 0.6
+        },
+        {
+          "type": "sfx",
+          "kind": "static",
+          "params": {
+            "dur": 0.06
+          },
+          "gain": 0.25,
+          "fx": [
+            {
+              "type": "highpass",
+              "cutoff": 1800
+            }
+          ]
+        }
+      ],
+      "fx": [
+        {
+          "type": "mono"
+        },
+        {
+          "type": "fade",
+          "in": 0,
+          "out": 0.08
+        }
+      ]
+    },
+    {
+      "out": "armour_broken.wav",
+      "duration": 0.9,
+      "layers": [
+        {
+          "type": "sfx",
+          "kind": "hit",
+          "params": {
+            "dur": 0.3,
+            "tone": 180,
+            "crunch": 1.0
+          }
+        },
+        {
+          "type": "drum",
+          "kind": "crash",
+          "params": {
+            "decay": 0.7
+          },
+          "gain": 0.35,
+          "at": 0.02
+        },
+        {
+          "type": "seq",
+          "inst": "glass",
+          "steps": "G5:0.08 D5:0.08 A4:0.08 E4:0.3",
+          "at": 0.05,
+          "vel": 0.5
+        },
+        {
+          "type": "sfx",
+          "kind": "steel_ball",
+          "params": {
+            "surface": "metal",
+            "force": 0.4
+          },
+          "at": 0.25,
+          "gain": 0.5
+        },
+        {
+          "type": "sfx",
+          "kind": "steel_ball",
+          "params": {
+            "surface": "metal",
+            "force": 0.3,
+            "seed": 7
+          },
+          "at": 0.4,
+          "gain": 0.4
+        }
+      ],
+      "fx": [
+        {
+          "type": "reverb",
+          "mix": 0.15,
+          "size": 0.35
+        },
+        {
+          "type": "mono"
+        },
+        {
+          "type": "fade",
+          "in": 0,
+          "out": 0.2
+        }
+      ]
+    },
+    {
+      "out": "armour_restored.wav",
+      "duration": 0.7,
+      "layers": [
+        {
+          "type": "seq",
+          "inst": "bell",
+          "steps": "C4:0.1 G4:0.1 C5:0.35",
+          "vel": 0.5,
+          "params": {
+            "decay": 0.8,
+            "bright": 0.6
+          }
+        },
+        {
+          "type": "sfx",
+          "kind": "sweep_up",
+          "params": {
+            "start": 300,
+            "end": 1400,
+            "dur": 0.4
+          },
+          "gain": 0.2
+        },
+        {
+          "type": "sfx",
+          "kind": "solenoid",
+          "params": {
+            "size": 0.2,
+            "metal": 0.8,
+            "thump": 0.1,
+            "bounce": 0.2
+          },
+          "at": 0.42,
+          "gain": 0.5
+        }
+      ],
+      "fx": [
+        {
+          "type": "reverb",
+          "mix": 0.15,
+          "size": 0.3
+        },
+        {
+          "type": "mono"
+        },
+        {
+          "type": "fade",
+          "in": 0,
+          "out": 0.15
+        }
+      ]
+    }
+  ]
+}

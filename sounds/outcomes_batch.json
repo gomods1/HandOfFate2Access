@@ -1,0 +1,45 @@
+{
+  "out_dir": "sounds",
+  "sr": 44100,
+  "normalize": -1.0,
+  "sounds": [
+    {
+      "out": "outcome_huge_success.wav",
+      "duration": 0.5,
+      "layers": [
+        {"type": "seq", "inst": "bell", "steps": "C6:0.07 E6:0.07 G6:0.25", "vel": 0.7, "params": {"decay": 0.8, "bright": 0.8}},
+        {"type": "seq", "inst": "glockenspiel", "steps": "-:0.14 G6:0.2 C7:0.2", "vel": 0.5, "gain": 0.5},
+        {"type": "sfx", "kind": "success", "params": {"freq": "E5", "up": 7, "wave": "sine"}, "gain": 0.4}
+      ],
+      "fx": [{"type": "reverb", "mix": 0.15, "size": 0.4}, {"type": "mono"}, {"type": "fade", "in": 0, "out": 0.05}]
+    },
+    {
+      "out": "outcome_success.wav",
+      "duration": 0.4,
+      "layers": [
+        {"type": "seq", "inst": "marimba", "steps": "E5:0.1 A5:0.25", "vel": 0.8, "params": {"decay": 0.5}},
+        {"type": "seq", "inst": "kalimba", "steps": "-:0.1 A5:0.25", "vel": 0.6, "gain": 0.5}
+      ],
+      "fx": [{"type": "reverb", "mix": 0.1, "size": 0.3}, {"type": "mono"}, {"type": "fade", "in": 0, "out": 0.05}]
+    },
+    {
+      "out": "outcome_failure.wav",
+      "duration": 0.4,
+      "layers": [
+        {"type": "seq", "inst": "marimba", "steps": "E3:0.12 C3:0.25", "vel": 0.7, "params": {"decay": 0.5}},
+        {"type": "seq", "inst": "clarinet", "steps": "-:0.12 C3:0.25", "vel": 0.5, "gain": 0.4}
+      ],
+      "fx": [{"type": "lowpass", "cutoff": 1500}, {"type": "mono"}, {"type": "fade", "in": 0, "out": 0.06}]
+    },
+    {
+      "out": "outcome_huge_failure.wav",
+      "duration": 0.5,
+      "layers": [
+        {"type": "seq", "inst": "timpani", "steps": "C2:0.4", "vel": 0.9, "params": {"decay": 0.5}},
+        {"type": "sfx", "kind": "sweep_down", "params": {"start": 220, "end": 60, "dur": 0.35, "wave": "sine"}, "gain": 0.6},
+        {"type": "seq", "inst": "cello", "steps": "C2:0.35", "vel": 0.6, "gain": 0.4, "fx": [{"type": "lowpass", "cutoff": 900}]}
+      ],
+      "fx": [{"type": "mono"}, {"type": "fade", "in": 0, "out": 0.08}]
+    }
+  ]
+}

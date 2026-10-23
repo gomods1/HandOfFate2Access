@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc 3.12.1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Hand of Fate 2 Access</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      color: light-dark(#1a1a1a, #fdfdfd);
+      background-color: #fdfdfd;
+      background-color: light-dark(#fdfdfd, #1a1a1a);
+      color-scheme: light dark;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        color-scheme: light only;
+      }
+      html, body, pre, code {
+        background-color: transparent;
+      }
+      body, a, a:visited, blockquote {
+        color: black;
+      }
+      pre, code {
+        padding: 0;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a, a:visited {
+      color: inherit;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid;
+      border-color: #e6e6e6;
+      border-color: light-dark(#e6e6e6, #4c4c4c);
+      color: #606060;
+      color: light-dark(#606060, #b6b6b6);
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid currentColor;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid currentColor;
+      border-bottom: 1px solid currentColor;
+    }
+    th {
+      border-top: 1px solid currentColor;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body>
+<h1 id="hand-of-fate-2-access">Hand of Fate 2 Access</h1>
+<p>Ein Mod, der Hand of Fate 2 ohne Sehen spielbar macht. Alles, was das
+Spiel zeigt, wird über deinen Screenreader gesprochen, und die
+Echtzeitteile (Kampf, Pendel, Rad, das Mischen der Glückskarten) werden
+durch zusätzliche Klangsignale nach Gehör spielbar.</p>
+<p>Es ist ein Neubau des aufgegebenen „Hand of Fate 2 Accessibility
+Mod“, aufbauend auf Hand of Fate Access, dem Mod für das erste
+Spiel.</p>
+<h2 id="voraussetzungen">Voraussetzungen</h2>
+<ul>
+<li>Windows.</li>
+<li>Hand of Fate 2 (Steam).</li>
+<li>Ein Screenreader (NVDA, JAWS und andere). Ohne Screenreader nutzt
+der Mod die in Windows eingebaute Sprachausgabe.</li>
+</ul>
+<h2 id="installation">Installation</h2>
+<p>Am einfachsten geht es mit dem Installationsprogramm
+<code>HandOfFate2AccessibilityInstaller.exe</code>, das jedem Release
+beiliegt: Es findet das Spiel über Steam, installiert oder aktualisiert
+den Mod und kann ihn deinstallieren. Es funktioniert mit dem
+Screenreader. Von Hand geht es so:</p>
+<ol type="1">
+<li>Entpacke die Release-Zip in den Ordner von Hand of Fate 2 (den mit
+<code>Hand of Fate 2.exe</code>; bei einer Standard-Steam-Installation
+<code>C:\Program Files (x86)\Steam\steamapps\common\Hand of Fate 2</code>).
+Erlaube das Zusammenführen der Ordner.</li>
+<li>Starte das Spiel. Ein paar Sekunden nach dem Start hörst du „Hand of
+Fate 2 Access Version ... geladen“.</li>
+</ol>
+<p>Die Zip enthält den bereits konfigurierten Mod-Loader (BepInEx).</p>
+<h2 id="so-funktioniert-es">So funktioniert es</h2>
+<p>Hand of Fate 2 hat bereits eine vollständige Tastatur- und
+Controller-Navigation; der Mod liest sie vor. Bewege dich mit den
+Steuerungen des Spiels durch Menüs, Karten und Entscheidungen
+(Pfeiltasten, Eingabe oder Leertaste zum Bestätigen, Tab zum
+Zurückgehen, Escape für das Pausenmenü), und jedes Element spricht:</p>
+<ul>
+<li>Karten lesen Namen, Typ, Werte und jede Eigenschaft mit ihrem
+Regeltext vor. Angebotene Ausrüstung wird mit der verglichen, die du
+trägst.</li>
+<li>Begegnungen lesen Titel, Erzähltext, Ergebnisse („+7 Nahrung“) und
+Optionen vor, einschließlich der Kosten oder Bedingung neben einer
+Option und ob sie nicht verfügbar ist.</li>
+<li>Die gesprochenen Zeilen des Kartengebers und der Figuren werden
+vollständig in deiner Sprache vorgelesen, egal ob die
+Untertitel-Einstellung des Spiels an ist oder nicht.</li>
+<li>Fragen in der unteren Leiste („Kriegeraxt ausrüsten? Ja, Nein“)
+werden vorgelesen, sobald sie erscheinen.</li>
+<li>Die Ziele der Herausforderung werden vorgelesen, wenn sie
+erscheinen, sich ändern, erfüllt werden oder scheitern.</li>
+<li>Das Ende eines Durchlaufs wird mit dem Urteil des Spiels angesagt
+(Tod durch Wunden oder Hunger, Aufgabe, gescheiterte Herausforderung),
+danach die Ergebnisse.</li>
+<li>Dialoge, das Tutorial der Kampfsteuerung (mit der Taste jeder
+Aktion), Kreaturenvorstellungen und die Charaktergestaltung (Herkunft,
+Siegel und eine Beschreibung jeder Frisur und Kleidungsfarbe) werden
+vorgelesen.</li>
+<li>Änderungen an Nahrung, Gold, Ruhm und Leben werden angesagt, sobald
+sie passieren.</li>
+<li>Bildschirmnamen werden beim Betreten gesprochen (Hauptmenü, Karte,
+Herausforderungskarte, Deckbauer, Inventar, Pause, Ergebnisse). Das
+Inventar sagt außerdem, was in jedem Platz liegt, leere eingeschlossen,
+denn der Cursor des Spiels überspringt leere Plätze.</li>
+<li>Die Punktetabelle am Ende eines Durchlaufs (Endlos) wird Zeile für
+Zeile mit ihren Spaltennamen vorgelesen.</li>
+<li>Läden: Jeder Artikel liest seinen Preis („37 Gold“) und sagt, wenn
+du ihn dir nicht leisten kannst; Bestätigungsaktionen, die etwas
+Bestimmtes tun („Kaufen, Eingabe“), werden mit ihrer Taste
+angesagt.</li>
+<li>Aktionen auf einer Funktionstaste (F1 Inventar, F3 Karte, F3 Fertig
+auf dem Charakterbildschirm, F3 Start im Deckbauer) werden mit ihrer
+Taste angesagt, wenn sie erscheinen. Das Inventar sagt, dass Tab (die
+Zurück-Taste des Spiels) es schließt.</li>
+<li>In einer Begegnung wählen die Zifferntasten 1 bis 9 eine Option
+direkt (eine Spielfunktion).</li>
+<li>Die Herausforderungskarte: Jede Herausforderung liest ihren Namen
+und ob sie gesperrt ist (mit dem, was sie freischaltet), abgeschlossen
+ist oder ihren Gold- oder Silbermarker verdient hat; Kampagne,
+Abenteuer, Endlos und Lagerfeuer sagen, welcher Bereich gezeigt wird
+(Lagerfeuer enthält den Bildschirm zum Ändern des Aussehens). Das Öffnen
+einer Herausforderung liest Titel und Beschreibung.</li>
+<li>Einstellungen: Jede Zeile liest Namen und Wert (Listen,
+Kontrollkästchen, Regler, Tastenbelegungen), und der neue Wert wird beim
+Ändern gesprochen.</li>
+<li>Belohnungskarten, die am Ende einer Herausforderung umgedreht
+werden, werden beim Aufdecken vorgelesen.</li>
+<li>Der Deckbauer: Jedes Deck sagt seinen Namen, seinen Zweck und seinen
+Füllstand („Begegnungen, 13 von 13 Karten“); darin bewegen Links und
+Rechts durch die verfügbaren Karten oder dein Deck (Unten und Oben
+wechseln dazwischen), und jede Karte sagt Namen, Art und Werte (Strg +
+Oben liest den Rest); Bestätigen fügt sie hinzu oder entfernt sie, und
+die neue Anzahl wird gesprochen.</li>
+<li>Fragen in der unteren Leiste nennen auf der Tastatur ihre Tasten
+(„Verlassen, Tab; Würfel annehmen, F3“). Tastennamen werden in deiner
+Sprache gesprochen.</li>
+</ul>
+<h2 id="tasten-die-der-mod-hinzufügt">Tasten, die der Mod hinzufügt</h2>
+<ul>
+<li><strong>F4</strong>: Hilfe für den aktuellen Bildschirm, zuerst die
+Spieltasten dort, dann die des Mods. Pfeil hoch und runter lesen sie
+Eintrag für Eintrag; F4 oder Tab schließt sie. (F1 ist die Inventartaste
+des Spiels.)</li>
+<li><strong>Strg + Oben / Strg + Unten</strong>: liest die Details
+dessen, was den Fokus hat, Zeile für Zeile. Eine Karte wird kurz
+angesagt (Name, Art, Werte); ihre Eigenschaften und Regeln stehen hier.
+Funktioniert überall, auch im Kampf.</li>
+<li><strong>Strg + Links / Strg + Rechts</strong>: wechselt, was Strg +
+Oben und Unten lesen: <strong>Details</strong> (das fokussierte
+Element), <strong>Ereignisse</strong> (alles bisher Angesagte, Neuestes
+zuerst: Begegnungstext, Fragen, Kampfbeginn, Lebenswarnungen,
+Ergebnisse) und <strong>Status</strong> (Leben, Nahrung, Gold, Ruhm,
+Gift und die Ausrüstung in jedem Platz). Leere Listen werden
+übersprungen.</li>
+<li><strong>H</strong> (oder Schrägstrich, oder Klick auf den rechten
+Stick): dein Leben, Nahrung, Gold, Ruhm und Gift.</li>
+<li><strong>O</strong>: die Ziele der aktuellen Herausforderung.</li>
+<li><strong>Umschalt + Pfeiltasten</strong> (oder der rechte Stick) auf
+der Karte: ein Erkundungscursor, der das ganze sichtbare Brett Karte für
+Karte abläuft und zu jeder Karte sagt, ob du dort stehst, ob du dorthin
+ziehen kannst, ob sie der Ausgang ist und welche Richtungen von ihr
+weiterführen. Er liest nur; ziehe mit den Pfeiltasten und Eingabe des
+Spiels. Strg + Oben liest danach die erkundete Karte vollständig.</li>
+<li><strong>Umschalt + Punkt</strong> auf der Karte: Der
+Erkundungscursor springt zur nächsten Karte, die du noch nicht besucht
+hast, die nächstgelegene zuerst; <strong>Umschalt + Komma</strong> geht
+zur vorherigen zurück. Jede Ansage endet damit, wo die Karte von dir aus
+liegt, und mit ihrem Platz in der Liste („unbesucht 2 von 5“); nach der
+letzten beginnt es wieder bei der nächstgelegenen. Ein Laden oder eine
+andere Karte, die du schon betreten hast, zählt nicht mehr. Er liest
+nur, wie Umschalt + Pfeiltasten.</li>
+<li><strong>C</strong> (oder Klick auf den linken Stick) im Kampf: ein
+Piepton aus der Richtung des nächsten Gegners. Sind die Gegner weg,
+zeigt er stattdessen auf das, was noch zu erreichen ist (den Ausgang,
+den sich schließenden Kreis eines Bosses, liegen gelassenes Gold oder
+Nahrung), oder sagt „keine Gegner mehr“.</li>
+<li><strong>Gegner, die du erledigen kannst</strong>: Ein zu Boden
+geworfener Gegner spielt ein aufsteigendes Zischen von dort, wo er
+liegt, das sich schneller wiederholt, je näher du kommst, bis er
+aufsteht. Geh hin und drück die Gnadenstoß-Taste des Spiels. Kann der
+nächste Gegner erledigt werden, antwortet <strong>C</strong> mit diesem
+Zischen statt mit dem üblichen Piepton. Sobald der Gnadenstoß treffen
+würde (nah genug und in der Richtung, in die du drückst oder schaust),
+bekommt das Zischen ein helles Klingen dazu: Drück jetzt die
+Gnadenstoß-Taste, in Richtung des Klangs. Auch <strong>C</strong>
+antwortet mit dem Klingen, wenn der nächste Gegner in Reichweite
+ist.</li>
+</ul>
+<h2 id="kampf-nach-gehör">Kampf nach Gehör</h2>
+<ul>
+<li>Der Kampf beginnt mit der Zahl der Gegner („Kampf, 3 Gegner“), und
+die Zahl wird gesprochen, wenn sie sich ändert. Dein Leben wird
+gesprochen, wenn es unter die Hälfte, ein Viertel und ein Zehntel
+fällt.</li>
+<li><strong>Klirren</strong>: ein Angriff, den du kontern kannst. Drücke
+Verteidigen. Das Spiel legt Angreifen und Verteidigen nur auf
+Maustasten, darum gibt der Mod ihnen Tasten: <strong>V greift an, B
+verteidigt</strong> (es sei denn, du belegst eigene in Einstellungen,
+Steuerung, Eingabe belegen). Ansagen nennen die Tastaturtaste oder den
+Controller-Knopf, wenn ein Pad in Gebrauch ist.</li>
+<li><strong>Knacken</strong>: ein Angriff, den du nicht blocken kannst.
+Ausweichen (Leertaste).</li>
+<li><strong>Wind</strong>: Wände. Der Wind auf jeder Seite wird stärker,
+je näher du einer Wand auf dieser Seite kommst; ein Rumpler heißt, du
+bist in eine gelaufen.</li>
+<li>Geschosse, Bodengefahren, Strahlen und Fallen haben jeweils ihren
+eigenen Klang, immer dort platziert, wo die Gefahr ist: Geh vom Klang
+weg.</li>
+<li>Ein Glockenton sagt dir, dass eine Waffenfähigkeit (links) oder
+Artefaktfähigkeit (rechts) wieder bereit ist.</li>
+<li><strong>Gefangen</strong>: Wenn sich ein Gegner an dich klammert
+(Gnomschwärme, die Fessel eines Magiers), hörst du „Gefangen“ mit der
+Taste, die du wiederholt drücken musst, bis „frei“ kommt. Die kleinen
+Treffer währenddessen sind die Fessel selbst.</li>
+<li><strong>Rüstung</strong>: Manche Gegner (der Schrecken von Westwend,
+verderbte Feinde) tragen eine Rüstung, die nur der
+<strong>Wuchtschlag</strong> beschädigt (standardmäßig E auf der
+Tastatur, B am Controller; hat er keine Taste, ergänzt die Mod X). Ein
+dumpfes Klonk heißt, dein Treffer ist abgeprallt; beim ersten Mal pro
+Gegner hörst du außerdem „Gepanzert, Wuchtschlag benutzen“ mit der
+Taste. Ein Knirschen heißt, dein Wuchtschlag hat sie angeknackst; ein
+Krachen und „Rüstung gebrochen“ heißen, deine Treffer wirken wieder
+voll; ein aufsteigender Schimmer heißt, die Rüstung wächst nach (leise,
+während sie heilt, lauter mit „Rüstung wiederhergestellt“, wenn
+gebrochene Rüstung zurückkommt). Jeder Klang kommt von diesem Gegner und
+hat in den Einstellungen eine eigene Lautstärke. Die Spielsteuerung
+Betäuben heißt in der ganzen Mod Wuchtschlag, wie auf den Karten des
+Spiels.</li>
+<li>Ist der Kampf zu schwer, automatisiert der Lehrlingsmodus des Spiels
+(Einstellungen, Allgemein; das Spiel bietet ihn auch nach ein paar Toden
+an) Konter und Todesstöße und erhöht deinen Schaden. Der Mod
+funktioniert in beiden Fällen gleich.</li>
+<li>In Kämpfen, die an einem Ausgang enden (Fallenräume), piept der
+Ausgang von der nächsten Biegung des begehbaren Weges dorthin, sodass
+dich der Weg zum Piepton um die Wände herum zum Ausgang führt; liegen
+gelassenes Gold und Nahrung piepen genauso, mit einem leichteren
+Klang.</li>
+<li>Eine Falle, die in die Bahn schießt, in der du stehst (Pfeile,
+Bolzen), spielt das Knacken: Beweg dich.</li>
+</ul>
+<p>Das Pausenmenü hat ganz unten eine neue Option,
+<strong>Klangglossar</strong>: Geh es mit den Pfeiltasten durch, um zu
+hören, was jeder Klang bedeutet; Eingabe spielt ihn ab, Tab schließt
+es.</p>
+<h2 id="minispiele">Minispiele</h2>
+<ul>
+<li><strong>Glückskarten</strong>: Die Karten werden gezeigt, jede mit
+eigenem Ton und ihrem Ergebnis aus ihrer Position gesprochen; dann folgt
+der Ton jeder Karte ihr durch das Mischen. Wähle die Position, die du
+verfolgt hast; die Karten werden als „Platz 1“, „Platz 2“ ...
+vorgelesen.</li>
+<li><strong>Pendel</strong>: Während es schwingt, hörst du das Ergebnis
+unter dem Strahl, das sich mit ihm nach links und rechts bewegt: höher
+und heller ist besser. Drücke Bestätigen beim gewünschten Ton; der Fokus
+erinnert dich daran.</li>
+<li><strong>Rad</strong>: Die Karten auf dem Rad werden beim Auslegen
+vorgelesen; während es dreht, tickt jedes Segment in der Stimme seines
+Ergebnisses vorbei; drücke Bestätigen, um es zu bremsen. Wo es landet,
+wird gesprochen.</li>
+<li><strong>Würfel</strong>: Drücke Bestätigen zum Werfen (sonst
+verlangt das Spiel ein Ziehen mit der Maus). Ziel, Summe und Würfel
+jedes Wurfs und ob du das Ziel erreicht hast, werden gesprochen; Würfel,
+die du neu werfen kannst, lesen ihren Wert und ob sie markiert sind, und
+das Markieren wird angesagt. F3 wirft neu.</li>
+</ul>
+<h2 id="sprachen">Sprachen</h2>
+<p>Der Mod folgt der Sprache des Spiels: Alle zwölf Sprachen des Spiels
+sind abgedeckt (alles, was das Spiel selbst sagt, ist immer in deiner
+Sprache). Diese README gibt es in jeder von ihnen im Ordner
+<code>docs</code>, als Markdown und als HTML
+(<code>docs/README.&lt;Sprache&gt;.md</code> und
+<code>docs/html/README.&lt;Sprache&gt;.html</code>).</p>
+<h2 id="für-entwickler">Für Entwickler</h2>
+<p>Siehe <code>CLAUDE.md</code>. <code>setup-bepinex.ps1</code>
+installiert den Loader, <code>build.ps1</code> baut und deployt,
+<code>test.ps1</code> führt die Offline-Tests aus.</p>
+</body>
+</html>

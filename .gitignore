@@ -1,0 +1,32 @@
+# Decompiled game source: reference only, never committed or shipped
+HoF2-Decompiled/
+hof2-firstpass/
+
+# .NET build output
+bin/
+obj/
+*.user
+*.suo
+
+# Release zips (assembled by release.ps1); release/payload is committed for the release workflow
+/release/*.zip
+/release/staging/
+
+# Playtest captures
+/tools/playtest/shots/
+
+# Local Claude settings
+.claude/settings.local.json
+
+# IDE
+.vs/
+.idea/
+
+# Python bytecode cache
+__pycache__/
+*.pyc
+
+# OS cruft
+Thumbs.db
+desktop.ini
+.DS_Store

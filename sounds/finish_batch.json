@@ -1,0 +1,104 @@
+{
+  "out_dir": "sounds",
+  "sr": 44100,
+  "normalize": -7.0,
+  "sounds": [
+    {
+      "out": "beacon_finish.wav",
+      "duration": 0.32,
+      "layers": [
+        {
+          "type": "sfx",
+          "kind": "whoosh",
+          "params": {
+            "dur": 0.1,
+            "low": 1800,
+            "high": 5000,
+            "direction": "up"
+          },
+          "gain": 0.3
+        },
+        {
+          "type": "seq",
+          "inst": "kalimba",
+          "steps": "E5:0.07 B5:0.2",
+          "at": 0.03,
+          "vel": 0.8
+        },
+        {
+          "type": "drum",
+          "kind": "rim",
+          "at": 0.03,
+          "gain": 0.35
+        }
+      ],
+      "fx": [
+        {
+          "type": "reverb",
+          "mix": 0.12,
+          "size": 0.25
+        },
+        {
+          "type": "mono"
+        },
+        {
+          "type": "fade",
+          "in": 0,
+          "out": 0.06
+        }
+      ]
+    },
+    {
+      "out": "beacon_finish_ready.wav",
+      "duration": 0.34,
+      "layers": [
+        {
+          "type": "sfx",
+          "kind": "whoosh",
+          "params": {
+            "dur": 0.1,
+            "low": 1800,
+            "high": 5000,
+            "direction": "up"
+          },
+          "gain": 0.3
+        },
+        {
+          "type": "seq",
+          "inst": "kalimba",
+          "steps": "E5:0.07 B5:0.2",
+          "at": 0.03,
+          "vel": 0.8
+        },
+        {
+          "type": "drum",
+          "kind": "rim",
+          "at": 0.03,
+          "gain": 0.35
+        },
+        {
+          "type": "seq",
+          "inst": "glass",
+          "steps": "E6:0.22",
+          "at": 0.1,
+          "vel": 0.6
+        }
+      ],
+      "fx": [
+        {
+          "type": "reverb",
+          "mix": 0.12,
+          "size": 0.25
+        },
+        {
+          "type": "mono"
+        },
+        {
+          "type": "fade",
+          "in": 0,
+          "out": 0.06
+        }
+      ]
+    }
+  ]
+}

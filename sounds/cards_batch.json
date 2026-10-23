@@ -1,0 +1,158 @@
+{
+  "out_dir": "sounds",
+  "sr": 44100,
+  "sounds": [
+    {
+      "out": "card_harp.wav",
+      "duration": 0.45,
+      "layers": [
+        {
+          "type": "seq",
+          "inst": "harp",
+          "steps": "C3:0.09 G3:0.3",
+          "vel": 0.85
+        },
+        {
+          "type": "seq",
+          "inst": "harp",
+          "steps": "-:0.09 C4:0.3",
+          "vel": 0.4,
+          "gain": 0.5
+        }
+      ],
+      "fx": [
+        {
+          "type": "reverb",
+          "mix": 0.12,
+          "size": 0.3
+        },
+        {
+          "type": "mono"
+        },
+        {
+          "type": "fade",
+          "in": 0,
+          "out": 0.06
+        },
+        {
+          "type": "normalize",
+          "level": -1.0
+        },
+        {
+          "type": "gain",
+          "db": -1.0
+        }
+      ]
+    },
+    {
+      "out": "card_flute.wav",
+      "duration": 0.45,
+      "layers": [
+        {
+          "type": "seq",
+          "inst": "flute",
+          "steps": "F#4:0.1 A4:0.28",
+          "vel": 0.8,
+          "params": {
+            "breath": 0.2
+          }
+        }
+      ],
+      "fx": [
+        {
+          "type": "reverb",
+          "mix": 0.12,
+          "size": 0.3
+        },
+        {
+          "type": "mono"
+        },
+        {
+          "type": "fade",
+          "in": 0,
+          "out": 0.08
+        },
+        {
+          "type": "normalize",
+          "level": -1.0
+        },
+        {
+          "type": "gain",
+          "db": -7.5
+        }
+      ]
+    },
+    {
+      "out": "card_handpan.wav",
+      "duration": 0.45,
+      "layers": [
+        {
+          "type": "seq",
+          "inst": "handpan",
+          "steps": "D4:0.1 A4:0.3",
+          "vel": 0.85
+        }
+      ],
+      "fx": [
+        {
+          "type": "reverb",
+          "mix": 0.12,
+          "size": 0.3
+        },
+        {
+          "type": "mono"
+        },
+        {
+          "type": "fade",
+          "in": 0,
+          "out": 0.08
+        },
+        {
+          "type": "normalize",
+          "level": -1.0
+        },
+        {
+          "type": "gain",
+          "db": -3.5
+        }
+      ]
+    },
+    {
+      "out": "card_music_box.wav",
+      "duration": 0.45,
+      "layers": [
+        {
+          "type": "seq",
+          "inst": "music_box",
+          "steps": "E6:0.08 B6:0.3",
+          "vel": 0.6
+        }
+      ],
+      "fx": [
+        {
+          "type": "reverb",
+          "mix": 0.12,
+          "size": 0.3
+        },
+        {
+          "type": "mono"
+        },
+        {
+          "type": "fade",
+          "in": 0,
+          "out": 0.08
+        },
+        {
+          "type": "normalize",
+          "level": -1.0
+        },
+        {
+          "type": "gain",
+          "db": -12.0
+        }
+      ]
+    }
+  ],
+  "normalize": null,
+  "max_loudness": null
+}

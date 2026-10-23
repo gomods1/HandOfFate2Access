@@ -1,0 +1,66 @@
+# Tag a release with the payload already committed in release/payload:
+#   set <Version> in Directory.Build.props, then .\release.ps1 (builds, tests, restages
+#   release/payload and READMEs), then
+#   git commit -am "Release 2.1.0" && git tag v2.1.0 && git push --follow-tags
+# CI cannot build the plugin: it references the game's own DLLs, which are not redistributable.
+# installer/HandOfFate2AccessibilityInstaller.exe is built from the shared installer project
+# (build_installer.bat there) and committed here.
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check the tag against the version in Directory.Build.props
+        run: |
+          version=$(sed -n 's:.*<Version>\(.*\)</Version>.*:\1:p' Directory.Build.props | head -1)
+          if [ "v$version" != "$GITHUB_REF_NAME" ]; then
+            echo "Tag $GITHUB_REF_NAME does not match <Version>$version</Version>; run release.ps1 and commit first." >&2
+            exit 1
+          fi
+
+      - name: Check that the payload and the installer are there
+        run: |
+          for f in winhttp.dll doorstop_config.ini \
+                   BepInEx/core/BepInEx.dll BepInEx/core/BepInEx.Preloader.dll BepInEx/core/0Harmony.dll \
+                   BepInEx/config/BepInEx.cfg \
+                   BepInEx/plugins/HandOfFate2Access/HandOfFate2Access.dll \
+                   BepInEx/plugins/HandOfFate2Access/HandOfFate2Access.Core.dll \
+                   BepInEx/plugins/HandOfFate2Access/Tolk.dll \
+                   BepInEx/plugins/HandOfFate2Access/HofSapi.dll \
+                   BepInEx/plugins/HandOfFate2Access/sounds/walltone_collision.wav \
+                   HandOfFate2Access-README/README.en.md; do
+            test -f "release/payload/$f" || { echo "release/payload/$f is missing" >&2; exit 1; }
+          done
+          if find release/payload -name 'playtest-remote*' | grep -q .; then
+            echo "The playtest remote must never ship." >&2
+            exit 1
+          fi
+          test -f installer/HandOfFate2AccessibilityInstaller.exe
+
+      - name: Release notes from this version's CHANGELOG section
+        run: |
+          version=${GITHUB_REF_NAME#v}
+          awk -v h="## $version" '$0 == h {on=1; next} /^## / {on=0} on' CHANGELOG.md > notes.md
+          test -s notes.md || { echo "CHANGELOG.md has no '## $version' section." >&2; exit 1; }
+
+      - name: Create zip
+        run: cd release/payload && zip -r "../../HandOfFate2Access-${GITHUB_REF_NAME}.zip" .
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            HandOfFate2Access-${{ github.ref_name }}.zip
+            installer/HandOfFate2AccessibilityInstaller.exe
+          body_path: notes.md
