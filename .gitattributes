@@ -1,0 +1,3 @@
+# The release payload ships exactly as release.ps1 staged it (doorstop_config.ini and the
+# READMEs keep their CRLF line endings).
+release/payload/** -text
